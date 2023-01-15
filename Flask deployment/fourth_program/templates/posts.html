@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Message Wall</title>
+{% endblock %}
+
+{% block body %}
+    <h1>Encrypted Messages</h1>
+    {% for post in posts %}
+
+        <h2>{{ post.title }}</h2>
+
+        <p>{{ post.content }}</p>
+
+
+        {% if post.author %}
+            <p>{{ post.author }}</p>
+        {% else %}
+            <p>By: NA</p>
+        {% endif %}
+
+
+    {% endfor %}
+{% endblock %}
