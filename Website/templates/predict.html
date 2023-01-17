@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Prediction Page</title>
+{% endblock %}
+
+{% block body %}
+    <p> Click to Generate Image: </p>
+    <form action = '/predict' method = "POST">
+        <input type = "submit" value = "Generate">
+    </form>
+    <hr>
+    <p><img src={{posts}} alt = "Generated Image"></p>
+{% endblock %}
