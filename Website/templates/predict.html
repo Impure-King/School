@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
-    <title>Prediction Page</title>
+    <title>{{title}}</title>
 {% endblock %}
 
 {% block body %}
@@ -10,5 +10,7 @@
         <input type = "submit" value = "Generate">
     </form>
     <hr>
-    <p><img src={{posts}} alt = "Generated Image"></p>
+    <div>
+    <img src={{posts}} alt = "Generated Image">
+    <div>
 {% endblock %}

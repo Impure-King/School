@@ -9,19 +9,17 @@ model = build_generator(seed_size = 128)
 def home():
     return render_template('home.html')
 
-def load_save(model):
-    model.load_weights("generator_weights.h5")
+def load_save(model = model):
+    model.load_weights("generator_weights-test.h5")
     generate_faces(model)
 
 @app.route('/predict', methods = ["GET", "POST"])
 def predict():
     if request.method == "POST":
-        # load_save(model)
-        # return render_template('predict.html', posts = 'generated.jpg')
-        request.method = "GET"
-        return render_template('predict.html', posts = 'generated.jpg')
+        load_save(model)
+        return render_template('predict.html', posts = '\static\generated.jpg')
     else:
-        return render_template('predict.html', title = 'Predict')
+        return render_template('predict.html', title = 'Prediction Page', posts = '\static\generated.jpg')
 
 if __name__ == '__main__':
     app.run(debug = True)

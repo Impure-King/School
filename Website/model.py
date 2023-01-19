@@ -72,9 +72,12 @@ def generate_faces(generator, seed_size = 128):
         # Convert to range [0,1] for plt.imshow()
         plt.imshow((generated_images[i,:,:,:]*0.5+0.5))
         plt.axis("off")
+    plt.savefig('static\generated.jpg')
     plt.show()
-    plt.savefig('generated.jpg')
 
 def load_save(model):
-    model.load_weights("Weights/generator_weights-test.h5")
+    model.load_weights("generator_weights-test.h5")
     generate_faces(model)
+
+model = build_generator(seed_size=128)
+model = load_save(model)
