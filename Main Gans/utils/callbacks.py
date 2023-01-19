@@ -74,5 +74,8 @@ class checkpoint_callback(keras.callbacks.Callback):
     def __init__(self,**kwargs):
         super(keras.callbacks.Callback, self).__init__(**kwargs)
     def on_epoch_end(self, epoch, logs=None):
-        self.model.generator.save("Weights/generator")
-        self.model.discriminator.save("Weights/discriminator")
+        self.model.generator.save("Weights/test/generator-test")
+        self.model.discriminator.save("Weights/test/discriminator-test")
+        self.model.generator.save("Weights/test/generator.h5")
+        self.model.discriminator.save("Weights/test/discriminator.h5")
+
