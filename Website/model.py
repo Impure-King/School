@@ -10,7 +10,7 @@ def generate_faces(generator, seed_size = 128):
     """Generates random Anime faces"""
     
     # generate 64 images by giving 64 inputs
-    noise = tf.random.normal([2,seed_size])
+    noise = tf.random.normal([1,seed_size])
     generated_images = generator(noise)
 
     fig = plt.figure(figsize=(12,12))
@@ -22,7 +22,7 @@ def generate_faces(generator, seed_size = 128):
     plt.savefig(r'Website/static/generated.jpg')
 
 def load_save():
-    model = keras.models.load_model(r'Website/weights/generator')
+    model = keras.models.load_model(r'Website/weights/generator-test')
     generate_faces(model)
 
 
