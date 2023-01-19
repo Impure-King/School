@@ -1,0 +1,23 @@
+body {
+    background-color: lightblue;
+    font-family: 'Arial', sans-serif;
+    font-size: 25px;
+}
+
+div.title {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: blue;
+}
+
+div.body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    text-align: center;
+}
+
+.Logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

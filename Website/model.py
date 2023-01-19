@@ -10,12 +10,12 @@ def generate_faces(generator, seed_size = 128):
     """Generates random Anime faces"""
     
     # generate 64 images by giving 64 inputs
-    noise = tf.random.normal([1,seed_size])
+    noise = tf.random.normal([4,seed_size])
     generated_images = generator(noise)
 
     fig = plt.figure(figsize=(12,12))
     for i in range(generated_images.shape[0]):
-        plt.subplot(1,2,i+1)
+        plt.subplot(2,2,i+1)
         # Convert to range [0,1] for plt.imshow()
         plt.imshow((generated_images[i,:,:,:]*0.5+0.5))
         plt.axis("off")

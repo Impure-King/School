@@ -1,5 +1,41 @@
 body {
-    background-color: green;
+    background-color: goldenrod;
     font-family: 'Roboto', sans-serif;
-    border : 5px solid red;
+    font-size: 25px;
+}
+
+img {
+    border : 5px solid rebeccapurple;
+}
+
+.generated {
+    display: block;
+    margin-left: auto;
+    margin-top: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+div.prompt {
+    text-align: center;
+    color: rebeccapurple;
+}
+
+.generator {
+    width: 100px;
+    height: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+div.memo {
+    text-align: left;
+    color: purple;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+.home {
+    font-size: medium;
 }
