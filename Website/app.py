@@ -11,8 +11,10 @@ def home():
     return render_template('home.html', title="Home Page")
 
 
+# Creating the predict directory
 @app.route('/predict', methods = ["GET", "POST"])
 def predict():
+    # Whenever the customer clicks a button, refer to the HTML and create an image.
     if request.method == "POST":
         load_save()
         return render_template('predict.html', posts = '\static\generated.jpg', title = "Prediction Page", home = '/')
