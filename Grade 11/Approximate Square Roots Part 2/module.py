@@ -21,7 +21,7 @@ class Sqrt(object):
         self.got_input = True
         self.input_message = "\rEnter the number to square root: "
       except:
-        print(f"Incorrect value supplied. Previous Entered Values: {ins}")
+        print(f"Incorrect value supplied. Previous Entered Values: {in_num}")
         self.input_message = "\rPlease enter a NUMERIC value to square root: "
     self.original_input = self.numerical_input
   
